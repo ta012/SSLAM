@@ -74,8 +74,8 @@ bash evaluate_AS2M_finetuned.sh
 
 
 ## Checklist 
--[x] Inference Mode
--[] Pre-Training
+- [x] Inference Mode
+- [ ] Pre-Training
 
 ---
 
