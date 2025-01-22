@@ -4,7 +4,7 @@
 
 
 
-This repository provides the code for **SSLAM**, a novel approach that enhances self-supervised learning models by leveraging audio mixtures in polyphonic soundscapes.
+This repository provides the code for **SSLAM**, a novel self-supervised learning framework designed to enhance audio representation quality for both polyphonic and monophonic soundscapes.
 
 ---
 
@@ -74,8 +74,8 @@ bash evaluate_AS2M_finetuned.sh
 
 
 ## Checklist 
-- [x] Inference code
-- [] Pre-Training code
+- [x] Inference Mode
+- [] Pre-Training
 
 ---
 
