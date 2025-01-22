@@ -67,7 +67,7 @@ cd SSLAM_Inference/scripts
 # Update paths in the script before running
 bash evaluate_AS2M_finetuned.sh
 
-# Reported mAP: 51.2
+# Reported mAP: 50.2
 ```
 
 ---
