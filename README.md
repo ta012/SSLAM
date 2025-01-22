@@ -32,7 +32,7 @@ conda create --prefix /path/to/sslam_eval_env -y python=3.9.13
 We provide both pre-trained and AudioSet-2M fine-tuned model weights:
 
 - [**Pre-Trained**](https://drive.google.com/drive/folders/1aA65-qQCHSCrkiDeLGUtn1PiEjJi5HS8?usp=sharing)
-- [**AS2M Fine-Tuned**](https://drive.google.com/drive/folders/1Yy38IyksON5RJFNM7gzeQoAOSPnEIKp2?usp=sharing) (SOTA mAP of 51.2)
+- [**AS2M Fine-Tuned**](https://drive.google.com/drive/folders/1Yy38IyksON5RJFNM7gzeQoAOSPnEIKp2?usp=sharing) (SOTA mAP of 50.2)
 
 ---
 
