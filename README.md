@@ -10,7 +10,7 @@ This repository provides the code for **SSLAM**, a novel self-supervised learnin
 
 ## **Inference Mode**
 
-> **Note**: If you are already using EAT in your evaluation/inference pipeline, you can simply replace the weights with SSLAM weights, as the inference and evaluation code is identical to EAT.
+> **Note**: If you are already using [EAT](https://github.com/cwx-worst-one/EAT/tree/main) in your evaluation/inference pipeline, you can simply replace the weights with SSLAM weights, as the inference and evaluation code is identical to EAT.
 
 If not, follow the steps below for installation:
 
@@ -81,7 +81,7 @@ bash evaluate_AS2M_finetuned.sh
 
 ## **Acknowledgements**
 
-Our code is primarily based on EAT, with additional concepts and components adapted from data2vec 2.0 and AudioMAE.
+Our code is primarily based on [EAT](https://github.com/cwx-worst-one/EAT/tree/main), with additional concepts and components adapted from [data2vec 2.0](https://github.com/facebookresearch/fairseq/tree/main/examples/data2vec) and [AudioMAE](https://github.com/facebookresearch/AudioMAE).
 
 
 ## **Citation**
