@@ -15,19 +15,16 @@ This repository provides the code for **SSLAM**, a novel self-supervised learnin
 If not, follow the steps below for installation:
 
 ```bash
-# Create a new conda environment
 conda create --prefix /path/to/sslam_eval_env -y python=3.9.13
 
-# Downgrade pip if necessary
-/path/to/sslam_eval_env/bin/python -m pip install pip==24.0
+/path/to/sslam_eval_env/bin/python -m pip install pip==24.0 # downgrade pip
 
-# Install required dependencies
 /path/to/sslam_eval_env/bin/pip install -r SSLAM_Inference/requirements_sslam_eval.txt
 ```
 
 ---
 
-### **Model Weights**
+#### **Model Weights**
 
 We provide both pre-trained and AudioSet-2M fine-tuned model weights:
 
@@ -36,38 +33,32 @@ We provide both pre-trained and AudioSet-2M fine-tuned model weights:
 
 ---
 
-### **Using SSLAM**
+#### **Using SSLAM**
 
 We provide scripts to use SSLAM in the following ways:
 
-#### 1. **Audio Feature (Representation) Extraction Using SSLAM Encoder**
+##### 1. **Audio Feature (Representation) Extraction Using SSLAM Encoder**
 
 ```bash
 cd SSLAM_Inference/scripts
 
-# Update paths in the script before running
 bash feature_extract.sh
 ```
 
-#### 2. **Inference on Single Audio WAV File**
+##### 2. **Inference on Single Audio WAV File**
 
 ```bash
 cd SSLAM_Inference/scripts
 
-# Update paths in the script before running
 bash inference.sh
 ```
 
-#### 3. **Evaluation on AudioSet-2M Evaluation Set**
+##### 3. **Evaluation on AudioSet-2M Evaluation Set**
 
 ```bash
-# Update the evaluation paths in data_manifests/manifest_as20k/eval.tsv
 cd SSLAM_Inference/scripts
 
-# Update paths in the script before running
-bash evaluate_AS2M_finetuned.sh
-
-# Reported mAP: 50.2
+bash evaluate_AS2M_finetuned.sh # Reported mAP: 50.2
 ```
 
 ---
@@ -81,7 +72,7 @@ bash evaluate_AS2M_finetuned.sh
 
 ## **Acknowledgements**
 
-Our code is primarily based on [EAT](https://github.com/cwx-worst-one/EAT/tree/main), with additional concepts and components adapted from [data2vec 2.0](https://github.com/facebookresearch/fairseq/tree/main/examples/data2vec) and [AudioMAE](https://github.com/facebookresearch/AudioMAE).
+Our code is primarily based on [EAT](https://github.com/cwx-worst-one/EAT/tree/main) and [data2vec 2.0](https://github.com/facebookresearch/fairseq/tree/main/examples/data2vec)  with additional concepts and components adapted from  [AudioMAE](https://github.com/facebookresearch/AudioMAE).
 
 
 ## **Citation**
