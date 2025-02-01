@@ -1,6 +1,6 @@
-# [ICLR 2025] SSLAM: Enhancing Self-Supervised Models with Audio Mixtures for Polyphonic Soundscapes ([Paper](https://openreview.net/forum?id=odU59TxdiB))
+# [ICLR 2025] SSLAM: Enhancing Self-Supervised Models with Audio Mixtures for Polyphonic Soundscapes
 
-This repository provides the code for **SSLAM**, a novel self-supervised learning framework designed to enhance audio representation quality for both polyphonic and monophonic soundscapes.
+This repository provides the code for **SSLAM**([Paper](https://openreview.net/forum?id=odU59TxdiB)), a novel self-supervised learning framework designed to enhance audio representation quality for both polyphonic and monophonic soundscapes.
 
 ---
 
