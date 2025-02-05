@@ -71,4 +71,15 @@ bash evaluate_AS2M_finetuned.sh # Reported mAP: 50.2
 Our code is primarily based on [EAT](https://github.com/cwx-worst-one/EAT/tree/main) and [data2vec 2.0](https://github.com/facebookresearch/fairseq/tree/main/examples/data2vec)  with additional concepts and components adapted from  [AudioMAE](https://github.com/facebookresearch/AudioMAE).
 
 
-## **Citation**
+## Citation
+
+If you find our work useful, please cite it as:  
+
+```bibtex
+@inproceedings{alex2025sslam,
+  title={{SSLAM}: Enhancing Self-Supervised Models with Audio Mixtures for Polyphonic Soundscapes},
+  author={Tony Alex and Sara Atito and Armin Mustafa and Muhammad Awais and Philip J B Jackson},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=odU59TxdiB}
+}
