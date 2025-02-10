@@ -4,6 +4,22 @@ This repository provides the code for **SSLAM**([Paper](https://openreview.net/f
 
 ---
 
+## What, Why, and How
+
+### Why
+Real-world audio is often polyphonic—featuring multiple overlapping sound sources—yet most self-supervised audio models are trained and benchmarked on monophonic datasets (such as isolated environmental sounds or speech). This mismatch raises concerns about their robustness in practical applications, particularly in multi-modal systems like large language models. SSLAM was developed to bridge this gap by enhancing models’ abilities to learn from the complex, overlapping sounds encountered in everyday scenarios.
+
+### What
+**Self-Supervised Learning from Audio Mixtures (SSLAM)** is a novel approach in audio self-supervised learning. It is designed to improve performance on polyphonic audio data while still maintaining strong results on monophonic benchmarks. By incorporating mixtures of audio signals during training, SSLAM achieves new state-of-the-art results—demonstrating improvements of up to 3.9% on AudioSet-2M and up to 9.1% on polyphonic datasets.
+
+### How
+SSLAM employs a training strategy that utilizes polyphonic audio mixtures to learn richer, more generalizable representations. The approach involves:
+- Training self-supervised audio models on mixtures rather than isolated sounds, incorporating a novel source retention loss that preserves the unique characteristics of each audio source. 
+- Evaluating the models on both standard monophonic SSL benchmarks and high-quality polyphonic datasets.
+- Demonstrating significant improvements in performance through both linear evaluation and fine-tuning regimes, with reported mean average precision (mAP) gains of up to 3.9% on AudioSet-2M and 9.1% on polyphonic data.
+
+---
+
 ## **Inference Mode**
 
 > **Note**: If you are already using [EAT](https://github.com/cwx-worst-one/EAT/tree/main) in your evaluation/inference pipeline, you can simply replace the weights with SSLAM weights, as the inference and evaluation code is identical to EAT.
