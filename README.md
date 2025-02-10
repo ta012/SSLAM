@@ -23,7 +23,7 @@
 ---
 ## 📊 Results
 
-### 1. Standard Audio-SSL Benchmark
+### 1. Standard Audio-SSL Benchmark Datasets
 ![Standard Audio-SSL Benchmark](assets/as2m_results.png)
 
 ### 2. Polyphonic Datasets
