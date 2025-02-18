@@ -8,7 +8,25 @@
 
 ---
 
-## 🔍 Why SSLAM?
+# 📋 Table of Contents
+- [Why SSLAM?](#why-sslam)
+- [Key Features](#key-features)
+- [Results](#results)
+- [Inference Mode](#️inference-mode)
+  - [Inference Installation](#inference-installation)
+  - [Model Weights](#model-weights)
+  - [Using SSLAM](#using-sslam)
+- [Training Mode](#training-mode)
+  - [Training Installation](#training-installation)
+  - [Data Preparation](#️data-preparation)
+  - [Pre-Training](#pre-training)
+- [Checklist](#checklist)
+- [Acknowledgements](#acknowledgements)
+- [Citation](#citation)
+
+---
+
+## 🔍 Why SSLAM? 
 🔊 **Real-world audio is polyphonic**—multiple overlapping sound sources are common in everyday environments.  
 ❌ **Existing SSL models focus on monophonic audio,** limiting their ability to generalize to real-world scenarios. Their benchmarks are primarily monophonic, and their pre-training does not account for polyphonic environments.   
 💡 **SSLAM bridges this gap** by introducing **self-supervised learning from audio mixtures**, enabling robust learning across **both monophonic and polyphonic soundscapes**.
@@ -129,7 +147,7 @@ bash pretrain_stage2.sh
 Our code is primarily based on [EAT](https://github.com/cwx-worst-one/EAT/tree/main) and [data2vec 2.0](https://github.com/facebookresearch/fairseq/tree/main/examples/data2vec)  with additional concepts and components adapted from  [AudioMAE](https://github.com/facebookresearch/AudioMAE).
 
 
-## 📜 Citation
+## 📜Citation
 
 If you find our work useful, please cite it as:  
 
