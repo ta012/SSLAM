@@ -43,8 +43,6 @@ from .images import (
 VERBOSE=False
 
 ##
-from .mixit_loss import get_mixit_loss
-loss_mixit = get_mixit_loss()
 ###
 logger = logging.getLogger(__name__)
 
