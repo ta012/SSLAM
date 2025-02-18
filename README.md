@@ -90,7 +90,8 @@ conda create --prefix /path/to/sslam_env -y python=3.9.13 ## env used for traini
 cd SSLAM/
 git clone https://github.com/facebookresearch/fairseq.git
 
-##IMPORTANT: Copy the Pre-Training/SSLAM_Stage2 directory to SSLAM/fairseq so that the resultant path is SSLAM/fairseq/SSLAM_Stage2/.
+##IMPORTANT: Copy the Pre-Training/SSLAM_Stage2 directory to SSLAM/fairseq 
+## so that the resultant path is SSLAM/fairseq/SSLAM_Stage2/.
 cd fairseq/
 
 ## install all requirements apart from fairseq
