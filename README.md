@@ -26,20 +26,20 @@
 
 ---
 
-## 🔍 Why SSLAM? 
+## 🔍Why SSLAM? 
 🔊 **Real-world audio is polyphonic**—multiple overlapping sound sources are common in everyday environments.  
 ❌ **Existing SSL models focus on monophonic audio,** limiting their ability to generalize to real-world scenarios. Their benchmarks are primarily monophonic, and their pre-training does not account for polyphonic environments.   
 💡 **SSLAM bridges this gap** by introducing **self-supervised learning from audio mixtures**, enabling robust learning across **both monophonic and polyphonic soundscapes**.
 
 ---
 
-## 🎼 Key Features
+## 🎼Key Features
 ✅ **Self-Supervised Learning from Audio Mixtures (SSLAM)** – improving robustness to real-world polyphonic audio  (multiple overlapping sounds).  
 ✅ **Source Retention Loss** – ensures the integrity of each sound source even in complex mixtures.  
 ✅ **SOTA Performance** – Achieves **+3.9% mAP improvement** on AudioSet-2M and **+9.1% on polyphonic datasets**.  
 
 ---
-## 📊 Results
+## 📊Results
 
 ### 1. Standard Audio-SSL Benchmark Datasets
 ![Standard Audio-SSL Benchmark](assets/as2m_results.png)
@@ -52,7 +52,7 @@
 > **Note**: If you are already using [EAT](https://github.com/cwx-worst-one/EAT/tree/main) in your evaluation/inference pipeline, you can simply replace the weights with SSLAM weights, as the inference and evaluation code is identical to EAT.
 
 If not, follow the steps below for installation:
-## 📥 Inference Installation
+## 📥Inference Installation
 
 ```bash
 conda create --prefix /path/to/sslam_eval_env -y python=3.9.13
@@ -61,7 +61,7 @@ conda create --prefix /path/to/sslam_eval_env -y python=3.9.13
 ```
 ---
 
-## 📦 Model Weights
+## 📦Model Weights
 
 | Model Type               | Link                                                                                       |
 |--------------------------|--------------------------------------------------------------------------------------------|
@@ -69,7 +69,7 @@ conda create --prefix /path/to/sslam_eval_env -y python=3.9.13
 | **AS2M Fine-Tuned** (50.2 mAP) | [Download](https://drive.google.com/drive/folders/1Yy38IyksON5RJFNM7gzeQoAOSPnEIKp2?usp=sharing) |
 ---
 
-#### 🚀 **Using SSLAM**
+#### 🚀**Using SSLAM**
 
 We provide scripts to use SSLAM in the following ways:
 
@@ -98,7 +98,7 @@ bash evaluate_AS2M_finetuned.sh # Reported mAP: 50.2
 ## **📈Training Mode**
 We cover the self-supervised pre-training, fine-tuning and linear evaluation under this section.
 
-#### **📥 Training Installation** 
+#### **📥Training Installation** 
 
 For training its better to install the fairseq in editable mode,
 
@@ -117,10 +117,10 @@ cd fairseq/
 ## install fairseq in editable mode
 /path/to/sslam_env/bin/pip install --editable ./
 ```
-#### 🗄️ Data Preparation
+#### 🗄️Data Preparation
 We utilised AudioSet-2M (full set) for pre-training. For this phase, only the `train.tsv` file is required. Refer to [train.tsv for AudioSet-20K](data_manifests/manifest_as20k/train.tsv) to prepare the train.tsv file for your downloaded copy of AudioSet-2M.
 
-#### 🚀 Pre-Training
+#### 🚀Pre-Training
 
 **Note:** This repository focuses solely on Stage 2 pre-training, which introduces our novel SSLAM pre-training strategy. 
 
@@ -136,13 +136,13 @@ bash pretrain_stage2.sh
 ```
 
 
-## 📌 Checklist 
+## 📌Checklist 
 - [x] Inference Mode
 - [x] Pre-Training
 
 ---
 
-## 🙏 Acknowledgements
+## 🙏Acknowledgements
 
 Our code is primarily based on [EAT](https://github.com/cwx-worst-one/EAT/tree/main) and [data2vec 2.0](https://github.com/facebookresearch/fairseq/tree/main/examples/data2vec)  with additional concepts and components adapted from  [AudioMAE](https://github.com/facebookresearch/AudioMAE).
 
