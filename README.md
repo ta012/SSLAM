@@ -30,7 +30,7 @@
 ![Polyphonic Datasets](assets/poly_results.png)
 
 ---
-## **🛠️Inference Mode**
+## **🔍️Inference Mode**
 > **Note**: If you are already using [EAT](https://github.com/cwx-worst-one/EAT/tree/main) in your evaluation/inference pipeline, you can simply replace the weights with SSLAM weights, as the inference and evaluation code is identical to EAT.
 
 If not, follow the steps below for installation:
@@ -77,11 +77,49 @@ bash evaluate_AS2M_finetuned.sh # Reported mAP: 50.2
 ```
 
 ---
+## **📈Training Mode**
+We cover the self-supervised pre-training, fine-tuning and linear evaluation under this section.
+
+#### **📥 Training Installation** 
+
+For training its better to install the fairseq in editable mode,
+
+```bash
+conda create --prefix /path/to/sslam_env -y python=3.9.13 ## env used for training
+/path/to/sslam_env/bin/python -m pip install pip==24.0 # downgrade pip
+cd SSLAM/
+git clone https://github.com/facebookresearch/fairseq.git
+
+##IMPORTANT: Copy the Pre-Training/SSLAM_Stage2 directory to SSLAM/fairseq so that the resultant path is SSLAM/fairseq/SSLAM_Stage2/.
+cd fairseq/
+
+## install all requirements apart from fairseq
+/path/to/sslam_env/bin/pip install -r SSLAM_Stage2/requirements_sslam.txt
+## install fairseq in editable mode
+/path/to/sslam_env/bin/pip install --editable ./
+```
+#### 🗄️ Data Preparation
+We utilised AudioSet-2M (full set) for pre-training. For this phase, only the `train.tsv` file is required. Refer to [train.tsv for AudioSet-20K](data_manifests/manifest_as20k/train.tsv) to prepare the train.tsv file for your downloaded copy of AudioSet-2M.
+
+#### 🚀 Pre-Training
+
+**Note:** This repository focuses solely on Stage 2 pre-training, which introduces our novel SSLAM pre-training strategy. 
+
+To begin Stage 2, you'll need a Stage 1 checkpoint. In our complete pre-training process, Stage 1 mirrors the approach in [EAT](https://github.com/cwx-worst-one/EAT/tree/main) and achieves similar performance. For convenience, we use the EAT checkpoint as the Stage 1 checkpoint.
+
+Download the [EAT](https://github.com/cwx-worst-one/EAT/tree/main) epoch 10 checkpoint using the link provided by the [EAT](https://github.com/cwx-worst-one/EAT/tree/main) repository: [EAT-base_epoch10_pt.pt](https://drive.google.com/file/d/10pklbY_fKraQUIBizSg1kv4lJXNWxpxl/view?usp=sharing).
+
+*Only the contents of the **models/** folder and a few parameters in the pre-training script differ between Stage 1 and Stage 2.*
+
+```bash
+cd SSLAM/fairseq/SSLAM_Stage2/scripts/
+bash pretrain_stage2.sh
+```
 
 
 ## 📌 Checklist 
 - [x] Inference Mode
-- [ ] Pre-Training
+- [x] Pre-Training
 
 ---
 
