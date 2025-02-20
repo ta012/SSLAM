@@ -4,7 +4,7 @@
 
 🚀 **SSLAM** is a self-supervised learning framework designed to enhance audio representation quality for both **polyphonic(multiple overlapping sounds)** and monophonic soundscapes. Unlike traditional SSL models that focus on monophonic data, SSLAM introduces a novel **source retention loss** and **audio mixture training**, significantly improving performance on real-world polyphonic audio.
 
-🔗 **[Paper](https://openreview.net/pdf?id=odU59TxdiB) | [Open Review](https://openreview.net/forum?id=odU59TxdiB) | [Pre-trained Models](https://drive.google.com/drive/folders/1G0icv-hdqDEqnfP4EFszMXhFnWWM09gT?usp=sharing)**
+🔗 **[Paper](https://openreview.net/pdf?id=odU59TxdiB) | [Open Review](https://openreview.net/forum?id=odU59TxdiB) | [🤗 Models](https://huggingface.co/ta012/SSLAM) | [Models(Google Drive)](https://drive.google.com/drive/folders/1G0icv-hdqDEqnfP4EFszMXhFnWWM09gT?usp=sharing)**
 
 ---
 
