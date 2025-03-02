@@ -11,7 +11,7 @@ git+https://github.com/facebookresearch/fairseq.git
 filelock==3.14.0
 fonttools==4.51.0
 fsspec==2024.3.1
-h5py==3.10.0
+# h5py==3.10.0
 huggingface-hub==0.22.2
 hydra-core==1.0.7
 idna==3.7

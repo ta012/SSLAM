@@ -9,7 +9,7 @@ import os
 import sys
 import time
 import io
-import h5py
+# import h5py
 
 import numpy as np
 import torch
@@ -360,11 +360,12 @@ class FileAudioDataset(RawAudioDataset):
         retry = 3
         wav = None
         for i in range(retry):
+            assert self.h5_format is False, "removed h5py dependency"
             try:
                 if self.h5_format and self.train_mode == 'train':
                     parts = path_or_fp.split("/")
                     path_or_fp = "/".join(parts[:-1])
-                    path_or_fp = h5py.File(path_or_fp,'r')
+                    # path_or_fp = h5py.File(path_or_fp,'r') ## removed h5py dependency
                     wav = path_or_fp[parts[-1]][:]
                     curr_sample_rate = 32000
                     break                    
@@ -372,6 +373,7 @@ class FileAudioDataset(RawAudioDataset):
                     wav, curr_sample_rate = sf.read(path_or_fp, dtype="float32")
                     break
             except Exception as e:
+
                 logger.warning(
                     f"Failed to read {path_or_fp}: {e}. Sleeping for {1 * i}"
                 )
