@@ -24,7 +24,7 @@ model_dir=${main_dir}/${sslam_dirname}/
 sample_wav=${main_dir}/${sslam_dirname}/inference/test.wav
 
 
-/path/to/sslam_eval_env/bin/python ${main_dir}/${sslam_dirname}/inference/inference.py  \
+/path/to/sslam_eval_minimal_env/bin/python ${main_dir}/${sslam_dirname}/inference/inference.py  \
     --source_file=$sample_wav \
     --label_file=$label_file \
     --model_dir=$model_dir \

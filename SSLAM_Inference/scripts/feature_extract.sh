@@ -27,7 +27,7 @@ mode='pretrain' ## pretrain: use this if you are using pre-trained checkpoint, f
 
 
 
-/path/to/sslam_eval_env/bin/python ${main_dir}/${sslam_dirname}/feature_extract/feature_extract.py  \
+/path/to/sslam_eval_minimal_env/bin/python ${main_dir}/${sslam_dirname}/feature_extract/feature_extract.py  \
     --source_file=$sample_wav \
     --target_file=$output_npy \
     --model_dir=${model_dir} \

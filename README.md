@@ -52,13 +52,28 @@
 > **Note**: If you are already using [EAT](https://github.com/cwx-worst-one/EAT/tree/main) in your evaluation/inference pipeline, you can simply replace the weights with SSLAM weights, as the inference and evaluation code is identical to EAT.
 
 If not, follow the steps below for installation:
-## 📥Inference Installation
+## 📥Minimal Installation for Inference/Evaluation 
+To simplify installation and avoid dependency conflicts, we've included a cloned copy of fairseq (`SSLAM_Inference/cloned_fairseq_copy/fairseq`) in the repository instead of requiring a direct fairseq installation.
+
 
 ```bash
-conda create --prefix /path/to/sslam_eval_env -y python=3.9.13
-/path/to/sslam_eval_env/bin/python -m pip install pip==24.0 # downgrade pip
-/path/to/sslam_eval_env/bin/pip install -r SSLAM_Inference/requirements_sslam_eval.txt
+conda create --prefix /path/to/sslam_infer_minimal_env -y python=3.9.13
+
+/path/to/sslam_infer_minimal_env/bin/pip install -r SSLAM_Inference/requirements_sslam_infer_minimal.txt
 ```
+
+**Important**: Update the fairseq path in these files:
+
+- `SSLAM_Inference/evaluation/eval.py`
+- `SSLAM_Inference/feature_extract/feature_extract.py`
+- `SSLAM_Inference/inference/inference.py`
+
+Look for the `fairseq_path` variable and update it to point to the included clone:
+```python
+fairseq_path = '/absolute/path/to/SSLAM/SSLAM_Inference/cloned_fairseq_copy/fairseq/'
+```
+
+
 ---
 
 ## 📦Model Weights
@@ -77,7 +92,7 @@ We provide scripts to use SSLAM in the following ways:
 
 ```bash
 cd SSLAM_Inference/scripts
-bash feature_extract.sh
+bash feature_extract.sh 
 ```
 
 ##### 2. **Inference on Single Audio WAV File**

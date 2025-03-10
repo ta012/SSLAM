@@ -7,11 +7,24 @@ import numpy as np
 import soundfile as sf
 import torch
 import torch.nn.functional as F
-import fairseq
+
 import torchaudio
 from sklearn import metrics as sklearn_metrics
 from tqdm import tqdm
 from torch.utils.data import Dataset, DataLoader
+
+import os
+import sys
+
+fairseq_path = '/path/to/SSLAM/SSLAM_Inference/cloned_fairseq_copy/fairseq/' ## Please update the absolute path to fairseq here
+
+if os.path.exists(fairseq_path):
+    sys.path.append(fairseq_path)
+    import fairseq
+else:
+    raise ImportError(f"Fairseq path does not exist: {fairseq_path}. Please update the path to fairseq in the script")
+
+
 
 
 def get_parser():

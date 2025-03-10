@@ -21,7 +21,7 @@ finetuned_model_path=/path/to/SSLAM_model_weights/SSLAM_AS2M_Finetuned/checkpoin
 
 model_dir=${main_dir}/${sslam_dirname}/
 
-/path/to/sslam_eval_env/bin/python ${main_dir}/${sslam_dirname}/evaluation/eval.py \
+/path/to/sslam_eval_minimal_env/bin/python ${main_dir}/${sslam_dirname}/evaluation/eval.py \
     --label_file=${label_file} \
     --model_dir=${model_dir} \
     --eval_dir=${data_manifest_dir} \
