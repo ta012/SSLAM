@@ -1,0 +1,114 @@
+Unable to find image 'container-registry.surrey.ac.uk/shared-containers/ubuntu22fairseq@sha256:aeba04488eb0ea580f2e0dd1c70c0d6664e3ed91c36a8be295930d5477e08d72' locally
+container-registry.surrey.ac.uk/shared-containers/ubuntu22fairseq@sha256:aeba04488eb0ea580f2e0dd1c70c0d6664e3ed91c36a8be295930d5477e08d72: Pulling from shared-containers/ubuntu22fairseq
+43f89b94cd7d: Pulling fs layer
+5e3b7ee77381: Pulling fs layer
+5bd037f007fd: Pulling fs layer
+4cda774ad2ec: Pulling fs layer
+775f22adee62: Pulling fs layer
+263fc748118f: Pulling fs layer
+16c36d0187d0: Pulling fs layer
+4cda774ad2ec: Waiting
+e7a56570655c: Pulling fs layer
+507fc9045cba: Pulling fs layer
+775f22adee62: Waiting
+23b7d8e07c16: Pulling fs layer
+e7a56570655c: Waiting
+922ac8fcb889: Pulling fs layer
+68075f2beca1: Pulling fs layer
+16f77452a00c: Pulling fs layer
+e53ab85c80f2: Pulling fs layer
+7de2b2bf7187: Pulling fs layer
+23065efcc105: Pulling fs layer
+6a1d7b75a157: Pulling fs layer
+16c36d0187d0: Waiting
+7dd566685571: Pulling fs layer
+bc6b60ace0f2: Pulling fs layer
+f04b0334c818: Pulling fs layer
+e53ab85c80f2: Waiting
+922ac8fcb889: Waiting
+4f4fb700ef54: Pulling fs layer
+16f77452a00c: Waiting
+7de2b2bf7187: Waiting
+cb986992dce2: Pulling fs layer
+23b7d8e07c16: Waiting
+f04b0334c818: Waiting
+7dd566685571: Waiting
+6a1d7b75a157: Waiting
+dd46c343837a: Pulling fs layer
+cb986992dce2: Waiting
+a5d27ea5a1df: Pulling fs layer
+68075f2beca1: Waiting
+5e7e34b919aa: Pulling fs layer
+bc6b60ace0f2: Waiting
+5e7e34b919aa: Waiting
+a5d27ea5a1df: Waiting
+5e3b7ee77381: Verifying Checksum
+5e3b7ee77381: Download complete
+4cda774ad2ec: Verifying Checksum
+4cda774ad2ec: Download complete
+775f22adee62: Download complete
+43f89b94cd7d: Verifying Checksum
+43f89b94cd7d: Download complete
+e7a56570655c: Download complete
+507fc9045cba: Download complete
+43f89b94cd7d: Pull complete
+5e3b7ee77381: Pull complete
+5bd037f007fd: Verifying Checksum
+5bd037f007fd: Download complete
+922ac8fcb889: Verifying Checksum
+922ac8fcb889: Download complete
+5bd037f007fd: Pull complete
+4cda774ad2ec: Pull complete
+775f22adee62: Pull complete
+68075f2beca1: Verifying Checksum
+68075f2beca1: Download complete
+16f77452a00c: Verifying Checksum
+16f77452a00c: Download complete
+e53ab85c80f2: Verifying Checksum
+e53ab85c80f2: Download complete
+7de2b2bf7187: Download complete
+263fc748118f: Verifying Checksum
+263fc748118f: Download complete
+263fc748118f: Pull complete
+16c36d0187d0: Pull complete
+e7a56570655c: Pull complete
+507fc9045cba: Pull complete
+23b7d8e07c16: Verifying Checksum
+23b7d8e07c16: Download complete
+7dd566685571: Verifying Checksum
+7dd566685571: Download complete
+bc6b60ace0f2: Verifying Checksum
+bc6b60ace0f2: Download complete
+f04b0334c818: Verifying Checksum
+f04b0334c818: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+cb986992dce2: Verifying Checksum
+cb986992dce2: Download complete
+23065efcc105: Verifying Checksum
+23065efcc105: Download complete
+a5d27ea5a1df: Download complete
+dd46c343837a: Verifying Checksum
+dd46c343837a: Download complete
+5e7e34b919aa: Verifying Checksum
+5e7e34b919aa: Download complete
+6a1d7b75a157: Verifying Checksum
+6a1d7b75a157: Download complete
+23b7d8e07c16: Pull complete
+922ac8fcb889: Pull complete
+68075f2beca1: Pull complete
+16f77452a00c: Pull complete
+e53ab85c80f2: Pull complete
+7de2b2bf7187: Pull complete
+23065efcc105: Pull complete
+6a1d7b75a157: Pull complete
+7dd566685571: Pull complete
+bc6b60ace0f2: Pull complete
+f04b0334c818: Pull complete
+4f4fb700ef54: Pull complete
+cb986992dce2: Pull complete
+dd46c343837a: Pull complete
+a5d27ea5a1df: Pull complete
+5e7e34b919aa: Pull complete
+Digest: sha256:aeba04488eb0ea580f2e0dd1c70c0d6664e3ed91c36a8be295930d5477e08d72
+Status: Downloaded newer image for container-registry.surrey.ac.uk/shared-containers/ubuntu22fairseq@sha256:aeba04488eb0ea580f2e0dd1c70c0d6664e3ed91c36a8be295930d5477e08d72
