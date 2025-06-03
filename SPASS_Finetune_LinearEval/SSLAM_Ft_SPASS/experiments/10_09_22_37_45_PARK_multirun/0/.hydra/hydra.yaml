@@ -1,0 +1,147 @@
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: /mnt/fast/nobackup/users/ta01123//eat_apr30/fairseq//SPASS/RUN_ALL/EAT_FtCkptMixRegionExtraMixLCls1Layer2S2TDrpInpTBothNoMixCls_RunAll/experiments/10_09_22_37_45_PARK_multirun/
+    subdir: ${hydra.job.num}
+  hydra_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(asctime)s][HYDRA] %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+    root:
+      level: INFO
+      handlers:
+      - console
+    loggers:
+      logging_example:
+        level: DEBUG
+    disable_existing_loggers: false
+  job_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(name)s][%(levelname)s] - %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+      file:
+        class: logging.FileHandler
+        formatter: simple
+        filename: ${hydra.job.name}.log
+    root:
+      level: INFO
+      handlers:
+      - console
+      - file
+    disable_existing_loggers: false
+  sweeper:
+    _target_: hydra._internal.core_plugins.basic_sweeper.BasicSweeper
+    max_batch_size: null
+  launcher:
+    _target_: hydra._internal.core_plugins.basic_launcher.BasicLauncher
+  help:
+    app_name: ${hydra.job.name}
+    header: '${hydra.help.app_name} is powered by Hydra.
+
+      '
+    footer: 'Powered by Hydra (https://hydra.cc)
+
+      Use --hydra-help to view Hydra specific help
+
+      '
+    template: '${hydra.help.header}
+
+      == Configuration groups ==
+
+      Compose your configuration from those groups (group=option)
+
+
+      $APP_CONFIG_GROUPS
+
+
+      == Config ==
+
+      Override anything in the config (foo.bar=value)
+
+
+      $CONFIG
+
+
+      ${hydra.help.footer}
+
+      '
+  hydra_help:
+    hydra_help: ???
+    template: 'Hydra (${hydra.runtime.version})
+
+      See https://hydra.cc for more info.
+
+
+      == Flags ==
+
+      $FLAGS_HELP
+
+
+      == Configuration groups ==
+
+      Compose your configuration from those groups (For example, append hydra/job_logging=disabled
+      to command line)
+
+
+      $HYDRA_CONFIG_GROUPS
+
+
+      Use ''--cfg hydra'' to Show the Hydra config.
+
+      '
+  output_subdir: .hydra
+  overrides:
+    hydra:
+    - hydra.sweep.dir=/mnt/fast/nobackup/users/ta01123//eat_apr30/fairseq//SPASS/RUN_ALL/EAT_FtCkptMixRegionExtraMixLCls1Layer2S2TDrpInpTBothNoMixCls_RunAll/experiments/10_09_22_37_45_PARK_multirun/
+    task:
+    - common.user_dir=SPASS/RUN_ALL/EAT_FtCkptMixRegionExtraMixLCls1Layer2S2TDrpInpTBothNoMixCls_RunAll
+    - checkpoint.save_dir=/mnt/fast/nobackup/scratch4weeks/ta01123/to_del_eat/10_09_22_37_45_PARK/
+    - checkpoint.restore_file=None
+    - checkpoint.save_interval=500000
+    - checkpoint.best_checkpoint_metric=mAP
+    - checkpoint.no_save=True
+    - checkpoint.no_last_checkpoints=True
+    - checkpoint.no_save_optimizer_state=True
+    - dataset.batch_size=48
+    - task.data=/mnt/fast/nobackup/users/ta01123//eat_apr30/fairseq/SPASS/SPASS_Create_Manifests/manifest_SPASS_PARK/
+    - task.target_length=1024
+    - task.roll_aug=True
+    - optimization.lr=[5e-05]
+    - optimizer.groups.default.lr_float=5e-05
+    - optimization.max_update=3906
+    - optimizer.groups.default.lr_scheduler.warmup_updates=390
+    - model.model_path=/mnt/fast/nobackup/users/ta01123/eat_apr30/fairseq/EAT_CkptMixRegionExtraMixLCls1Layer2S2TDrpInpTBothNoMixCls/experiments/EAT_CkptMixRegionExtraMixLCls1Layer2S2TDrpInpTBothNoMixCls/checkpoint_last.pt
+    - model.num_classes=23
+    - model.mixup=0.8
+    - model.mask_ratio=0.2
+    - model.prediction_mode=PredictionMode.CLS_TOKEN
+  job:
+    name: hydra_train
+    override_dirname: checkpoint.best_checkpoint_metric=mAP,checkpoint.no_last_checkpoints=True,checkpoint.no_save=True,checkpoint.no_save_optimizer_state=True,checkpoint.restore_file=None,checkpoint.save_dir=/mnt/fast/nobackup/scratch4weeks/ta01123/to_del_eat/10_09_22_37_45_PARK/,checkpoint.save_interval=500000,common.user_dir=SPASS/RUN_ALL/EAT_FtCkptMixRegionExtraMixLCls1Layer2S2TDrpInpTBothNoMixCls_RunAll,dataset.batch_size=48,model.mask_ratio=0.2,model.mixup=0.8,model.model_path=/mnt/fast/nobackup/users/ta01123/eat_apr30/fairseq/EAT_CkptMixRegionExtraMixLCls1Layer2S2TDrpInpTBothNoMixCls/experiments/EAT_CkptMixRegionExtraMixLCls1Layer2S2TDrpInpTBothNoMixCls/checkpoint_last.pt,model.num_classes=23,model.prediction_mode=PredictionMode.CLS_TOKEN,optimization.lr=[5e-05],optimization.max_update=3906,optimizer.groups.default.lr_float=5e-05,optimizer.groups.default.lr_scheduler.warmup_updates=390,task.data=/mnt/fast/nobackup/users/ta01123//eat_apr30/fairseq/SPASS/SPASS_Create_Manifests/manifest_SPASS_PARK/,task.roll_aug=True,task.target_length=1024
+    id: '0'
+    num: 0
+    config_name: finetuning
+    env_set: {}
+    env_copy: []
+    config:
+      override_dirname:
+        kv_sep: '='
+        item_sep: ','
+        exclude_keys: []
+  runtime:
+    version: 1.0.7
+    cwd: /scratch/condor/dir_3483644
+  verbose: false
