@@ -155,6 +155,8 @@ bash pretrain_stage2.sh
 ## 📌Checklist 
 - [x] Inference Mode
 - [x] Pre-Training
+- [x] Finetuning & Linear Evaluation
+
 
 ---
 
