@@ -14,7 +14,8 @@
 - [Key Features](#key-features)
 - [Results](#results)
 - [Inference Mode](#️inference-mode)
-  - [Inference Installation](#inference-installation)
+  - [Hugging Face Inference](#hugging-face-inference)
+  - [Inference Installation](#minimal-installation-for-inference/evaluation)
   - [Model Weights](#model-weights)
   - [Using SSLAM](#using-sslam)
 - [Training Mode](#training-mode)
@@ -49,11 +50,20 @@
 ![Polyphonic Datasets](assets/poly_results.png)
 
 ---
+
 ## **🔍️Inference Mode**
+
+## 🤗Hugging Face Inference
+
+You can run SSLAM for feature extraction without cloning this repo via [Hugging Face](https://huggingface.co/ta012/SSLAM_pretrain).
+
+
+
+## 📥Minimal Installation for Inference/Evaluation 
 > **Note**: If you are already using [EAT](https://github.com/cwx-worst-one/EAT/tree/main) in your evaluation/inference pipeline, you can simply replace the weights with SSLAM weights, as the inference and evaluation code is identical to EAT.
 
 If not, follow the steps below for installation:
-## 📥Minimal Installation for Inference/Evaluation 
+
 To simplify installation and avoid dependency conflicts, we've included a cloned copy of fairseq (`SSLAM_Inference/cloned_fairseq_copy/fairseq`) in the repository instead of requiring a direct fairseq installation.
 
 
