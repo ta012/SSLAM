@@ -57,6 +57,8 @@
 
 You can run SSLAM for feature extraction without cloning this repo via [Hugging Face](https://huggingface.co/ta012/SSLAM_pretrain).
 
+- **[Pretrained](https://huggingface.co/ta012/SSLAM_pretrain) AudioSet 2M - ViT Base - Feature Extraction:**
+- **[Finetuned on AudioSet 2M(50.2 mAP)](https://huggingface.co/ta012/SSLAM_AS2M_Finetuned) - Feature Extraction and Event Labels:**
 
 
 ## 📥Minimal Installation for Inference/Evaluation 
