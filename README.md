@@ -4,7 +4,7 @@
 
 🚀 **SSLAM** is a self-supervised learning framework designed to enhance audio representation quality for both **polyphonic(multiple overlapping sounds)** and monophonic soundscapes. Unlike traditional SSL models that focus on monophonic data, SSLAM introduces a novel **source retention loss** and **audio mixture training**, significantly improving performance on real-world polyphonic audio.
 
-🔗 **[Paper](https://openreview.net/pdf?id=odU59TxdiB) | [ICLR 2025 Poster: Video & Slides](https://iclr.cc/virtual/2025/poster/28347)  | [🤗 Hugging Face SSLAM_pretrain](https://huggingface.co/ta012/SSLAM_pretrain) | [🤗 Hugging Face SSLAM_AS2M_Finetuned](https://huggingface.co/ta012/SSLAM_AS2M_Finetuned)  **
+🔗 **[Paper](https://openreview.net/pdf?id=odU59TxdiB) | [ICLR 2025:Video&Slides](https://iclr.cc/virtual/2025/poster/28347)  | [🤗Hugging Face SSLAM_pretrain](https://huggingface.co/ta012/SSLAM_pretrain) | [🤗Hugging Face SSLAM_AS2M_Finetuned](https://huggingface.co/ta012/SSLAM_AS2M_Finetuned)**
 
 
 ---
